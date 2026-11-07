@@ -5,17 +5,17 @@
 
   <br/><br/>
 
-  <!-- Minimalist Badges with New Custom Palette -->
+  <!-- Minimalist Badges with Soft Palette -->
   <a href="https://github.com/Nghiamh/ArenaS-Platform">
-    <img src="https://img.shields.io/badge/ARENAS--PLATFORM-Monorepo-83BFA9?style=flat-square&logo=github&logoColor=101C20&labelColor=19343A" />
+    <img src="https://img.shields.io/badge/ARENAS--PLATFORM-Monorepo-5BB59E?style=flat-square&logo=github&logoColor=0A1215&labelColor=112026" />
   </a>
   &nbsp;
   <a href="https://github.com/emergency-dispatch/emergency-dispatch-frontend">
-    <img src="https://img.shields.io/badge/EMERGENCY--DISPATCH-Realtime-83BFA9?style=flat-square&logo=github&logoColor=101C20&labelColor=19343A" />
+    <img src="https://img.shields.io/badge/EMERGENCY--DISPATCH-Realtime-5BB59E?style=flat-square&logo=github&logoColor=0A1215&labelColor=112026" />
   </a>
   &nbsp;
   <a href="mailto:hako1412004@gmail.com">
-    <img src="https://img.shields.io/badge/EMAIL-hako1412004%40gmail.com-DCEAE2?style=flat-square&logo=gmail&logoColor=101C20&labelColor=19343A" />
+    <img src="https://img.shields.io/badge/EMAIL-hako1412004%40gmail.com-C8DDD5?style=flat-square&logo=gmail&logoColor=0A1215&labelColor=112026" />
   </a>
 
 </div>
