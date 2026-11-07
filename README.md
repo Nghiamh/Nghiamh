@@ -1,17 +1,7 @@
 <div align="center">
 
-  <h1>HỒ MINH NGHĨA</h1>
-  <p><strong>Mobile &amp; Fullstack Web Engineer</strong> &bull; 🌼</p>
-
-  <!-- Typing SVG Animation -->
-  <a href="https://github.com/Nghiamh">
-    <img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=500&size=15&duration=2800&pause=1000&color=38BFA7&center=true&vCenter=true&width=740&height=36&lines=H%E1%BB%93+Minh+Ngh%C4%A9a+(Nghiamh);Mobile+%26+Fullstack+Web+Engineer;Core:+React+Native+%C2%B7+React.js+%C2%B7+Node.js+%C2%B7+TypeScript;%22Clean+code%2C+fluid+UX%2C+and+resilient+architecture.%22" alt="Typing Animation" />
-  </a>
-
-  <br/><br/>
-
-  <!-- Interactive Studio Component (Tabs: 🌿 profile.ts · 🛠️ stack.json · 🚀 projects.md) -->
-  <img src="./assets/terminal.svg" width="100%" alt="Developer Workspace" />
+  <!-- Bento Grid Dashboard Component (No Avatar Required) -->
+  <img src="./assets/bento.svg" width="100%" alt="Hồ Minh Nghĩa - Developer Bento Dashboard" />
 
   <br/><br/>
 
