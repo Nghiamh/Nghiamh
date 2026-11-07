@@ -1,193 +1,162 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 248" width="100%" height="248">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 270" width="100%" height="270">
   <defs>
     <style>
       @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&amp;display=swap');
-      
+
       text {
         font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, 'Segoe UI', monospace;
         user-select: none;
       }
-      
-      /* Slide Transitions: 21s total (7s per slide) */
-      @keyframes s1 {
+
+      /* Tab Switch Animation: 21s total (7s per tab) */
+      @keyframes tab1Anim {
         0%, 28.5% { opacity: 1; visibility: visible; }
         33.3%, 95.2% { opacity: 0; visibility: hidden; }
         100% { opacity: 1; visibility: visible; }
       }
-      @keyframes s2 {
+      @keyframes tab2Anim {
         0%, 28.5% { opacity: 0; visibility: hidden; }
         33.3%, 61.9% { opacity: 1; visibility: visible; }
         66.6%, 100% { opacity: 0; visibility: hidden; }
       }
-      @keyframes s3 {
+      @keyframes tab3Anim {
         0%, 61.9% { opacity: 0; visibility: hidden; }
         66.6%, 95.2% { opacity: 1; visibility: visible; }
         100% { opacity: 0; visibility: hidden; }
       }
-      
-      .slide-1 { animation: s1 21s ease-in-out infinite; }
-      .slide-2 { animation: s2 21s ease-in-out infinite; }
-      .slide-3 { animation: s3 21s ease-in-out infinite; }
-      
-      @keyframes blink {
-        0%, 49% { opacity: 1; }
-        50%, 100% { opacity: 0; }
-      }
-      .cursor { animation: blink 1s infinite; }
-      
-      /* Terminal Typography */
-      .prompt-user { fill: #38BFA7; font-weight: 600; font-size: 13px; }
-      .cmd         { fill: #A8E6CF; font-size: 13px; font-weight: 500; }
-      .key         { fill: #174D63; font-size: 12px; font-weight: 500; }
-      .val         { fill: #A8E6CF; font-size: 12px; }
-      .val-bold    { fill: #38BFA7; font-size: 12px; font-weight: 600; }
-      .val-dim     { fill: #8ecbb5; font-size: 12px; }
-      .meta        { fill: #48788a; font-size: 11px; }
-      .status-ok   { fill: #38BFA7; font-size: 11px; font-weight: 600; }
+
+      .tab-view-1 { animation: tab1Anim 21s ease-in-out infinite; }
+      .tab-view-2 { animation: tab2Anim 21s ease-in-out infinite; }
+      .tab-view-3 { animation: tab3Anim 21s ease-in-out infinite; }
+
+      /* Syntax Highlighting */
+      .ln       { fill: #205970; font-size: 11.5px; }
+      .kw       { fill: #38BFA7; font-weight: 600; font-size: 12.5px; }
+      .var-name { fill: #A8E6CF; font-size: 12.5px; }
+      .str      { fill: #9fe2cb; font-size: 12.5px; }
+      .str-hi   { fill: #FBBF24; font-size: 12.5px; font-weight: 500; }
+      .prop     { fill: #52a7b8; font-size: 12.5px; }
+      .comment  { fill: #2e6d85; font-size: 11.5px; font-style: italic; }
+      .punct    { fill: #38BFA7; font-size: 12.5px; }
+
+      @keyframes blink { 0%, 49% { opacity: 1; } 50%, 100% { opacity: 0; } }
+      .cursor { animation: blink 1s infinite; fill: #38BFA7; }
     </style>
 
-    <!-- Subtle Daisy Flower Icon definition -->
-    <g id="daisyIcon">
-      <ellipse cx="0" cy="-6" rx="2.5" ry="5.5" fill="#FFFFFF" opacity="0.9" />
-      <ellipse cx="0" cy="6" rx="2.5" ry="5.5" fill="#FFFFFF" opacity="0.9" />
-      <ellipse cx="-6" cy="0" rx="5.5" ry="2.5" fill="#FFFFFF" opacity="0.9" />
-      <ellipse cx="6" cy="0" rx="5.5" ry="2.5" fill="#FFFFFF" opacity="0.9" />
-      <ellipse cx="-4.2" cy="-4.2" rx="2.5" ry="5.5" transform="rotate(-45 -4.2 -4.2)" fill="#FFFFFF" opacity="0.85" />
-      <ellipse cx="4.2" cy="-4.2" rx="2.5" ry="5.5" transform="rotate(45 4.2 -4.2)" fill="#FFFFFF" opacity="0.85" />
-      <ellipse cx="-4.2" cy="4.2" rx="2.5" ry="5.5" transform="rotate(45 -4.2 4.2)" fill="#FFFFFF" opacity="0.85" />
-      <ellipse cx="4.2" cy="4.2" rx="2.5" ry="5.5" transform="rotate(-45 4.2 4.2)" fill="#FFFFFF" opacity="0.85" />
-      <circle cx="0" cy="0" r="3.2" fill="#FBBF24" />
+    <!-- Daisy Accent Icon -->
+    <g id="daisy">
+      <ellipse cx="0" cy="-5" rx="2" ry="4.5" fill="#FFFFFF" opacity="0.95" />
+      <ellipse cx="0" cy="5" rx="2" ry="4.5" fill="#FFFFFF" opacity="0.95" />
+      <ellipse cx="-5" cy="0" rx="4.5" ry="2" fill="#FFFFFF" opacity="0.95" />
+      <ellipse cx="5" cy="0" rx="4.5" ry="2" fill="#FFFFFF" opacity="0.95" />
+      <ellipse cx="-3.5" cy="-3.5" rx="2" ry="4.5" transform="rotate(-45 -3.5 -3.5)" fill="#FFFFFF" opacity="0.9" />
+      <ellipse cx="3.5" cy="-3.5" rx="2" ry="4.5" transform="rotate(45 3.5 -3.5)" fill="#FFFFFF" opacity="0.9" />
+      <ellipse cx="-3.5" cy="3.5" rx="2" ry="4.5" transform="rotate(45 -3.5 3.5)" fill="#FFFFFF" opacity="0.9" />
+      <ellipse cx="3.5" cy="3.5" rx="2" ry="4.5" transform="rotate(-45 3.5 3.5)" fill="#FFFFFF" opacity="0.9" />
+      <circle cx="0" cy="0" r="2.8" fill="#FBBF24" />
     </g>
   </defs>
 
-  <!-- Terminal Window Background -->
-  <rect width="800" height="248" rx="10" fill="#0B2530" stroke="#174D63" stroke-width="1.2"/>
+  <!-- Studio Frame Background -->
+  <rect width="820" height="270" rx="10" fill="#0B2530" stroke="#174D63" stroke-width="1.2" />
 
-  <!-- Title Bar -->
-  <rect width="800" height="32" rx="10" fill="#061720"/>
-  <rect y="22" width="800" height="10" fill="#061720"/>
-  <line x1="0" y1="32" x2="800" y2="32" stroke="#174D63" stroke-width="1"/>
+  <!-- Tab Bar Header -->
+  <path d="M0,10 C0,4.47 4.47,0 10,0 L810,0 C815.53,0 820,4.47 820,10 L820,34 L0,34 Z" fill="#061720" />
+  <line x1="0" y1="34" x2="820" y2="34" stroke="#174D63" stroke-width="1" />
 
-  <!-- Window Controls -->
-  <circle cx="20" cy="16" r="4.5" fill="#ff5f56"/>
-  <circle cx="35" cy="16" r="4.5" fill="#ffbd2e"/>
-  <circle cx="50" cy="16" r="4.5" fill="#27c93f"/>
+  <!-- Window Control Pills -->
+  <circle cx="20" cy="17" r="4.5" fill="#174D63" />
+  <circle cx="36" cy="17" r="4.5" fill="#38BFA7" />
+  <circle cx="52" cy="17" r="4.5" fill="#A8E6CF" />
 
-  <!-- Window Header with Daisy Accent -->
-  <g transform="translate(325, 16)">
-    <use href="#daisyIcon" transform="scale(0.85)" />
-    <text x="14" y="4" class="meta" letter-spacing="1">nghiamh@workstation:~</text>
+  <!-- Tab 1: profile.ts -->
+  <g class="tab-view-1">
+    <rect x="75" y="6" width="130" height="28" rx="5" fill="#0B2530" stroke="#174D63" stroke-width="0.8" />
+    <text x="140" y="24" text-anchor="middle" font-size="11.5" fill="#A8E6CF" font-weight="600">🌿 profile.ts</text>
+  </g>
+  <g class="tab-view-2">
+    <text x="140" y="24" text-anchor="middle" font-size="11.5" fill="#336a7e">profile.ts</text>
+  </g>
+  <g class="tab-view-3">
+    <text x="140" y="24" text-anchor="middle" font-size="11.5" fill="#336a7e">profile.ts</text>
   </g>
 
-  <!-- Slide Indicators -->
-  <g class="slide-1"><text x="780" y="20" class="meta" text-anchor="end">[ 1 / 3 ]</text></g>
-  <g class="slide-2"><text x="780" y="20" class="meta" text-anchor="end">[ 2 / 3 ]</text></g>
-  <g class="slide-3"><text x="780" y="20" class="meta" text-anchor="end">[ 3 / 3 ]</text></g>
-
-  <!-- ═════════ SLIDE 1: WHOAMI ═════════ -->
-  <g class="slide-1">
-    <text y="62">
-      <tspan x="24" class="prompt-user">nghiamh@workstation:~$</tspan>
-      <tspan class="cmd"> whoami</tspan>
-      <tspan class="cursor" fill="#38BFA7">_</tspan>
-    </text>
-    
-    <text y="92">
-      <tspan x="24" class="key">name</tspan>
-      <tspan x="125" class="val-bold">Hồ Minh Nghĩa</tspan>
-      <tspan class="meta"> (Nghiamh · Developer)</tspan>
-    </text>
-    
-    <text y="120">
-      <tspan x="24" class="key">role</tspan>
-      <tspan x="125" class="val">Mobile &amp; Fullstack Web Developer</tspan>
-    </text>
-    
-    <text y="148">
-      <tspan x="24" class="key">stack</tspan>
-      <tspan x="125" class="val-dim">React Native · Expo · React.js · Node.js · TypeScript · MySQL</tspan>
-    </text>
-    
-    <text y="176">
-      <tspan x="24" class="key">motto</tspan>
-      <tspan x="125" class="val">"Tập trung tạo dựng sản phẩm mượt mà, tối ưu và bền vững."</tspan>
-    </text>
+  <!-- Tab 2: stack.json -->
+  <g class="tab-view-2">
+    <rect x="215" y="6" width="130" height="28" rx="5" fill="#0B2530" stroke="#174D63" stroke-width="0.8" />
+    <text x="280" y="24" text-anchor="middle" font-size="11.5" fill="#38BFA7" font-weight="600">🛠️ stack.json</text>
+  </g>
+  <g class="tab-view-1">
+    <text x="280" y="24" text-anchor="middle" font-size="11.5" fill="#336a7e">stack.json</text>
+  </g>
+  <g class="tab-view-3">
+    <text x="280" y="24" text-anchor="middle" font-size="11.5" fill="#336a7e">stack.json</text>
   </g>
 
-  <!-- ═════════ SLIDE 2: PROJECTS ═════════ -->
-  <g class="slide-2">
-    <text y="62">
-      <tspan x="24" class="prompt-user">nghiamh@workstation:~$</tspan>
-      <tspan class="cmd"> ls -la ./projects/</tspan>
-      <tspan class="cursor" fill="#38BFA7">_</tspan>
-    </text>
-    
-    <text y="96">
-      <tspan x="24" class="key">drwxr-xr-x</tspan>
-      <tspan x="125" class="val-bold">ArenaS-Platform/</tspan>
-      <tspan x="270" class="val-dim">React Native · Expo · React · Node.js · MySQL</tspan>
-    </text>
-    <text y="118">
-      <tspan x="270" class="meta">↳ Sports arena booking &amp; tournament management (Web + Mobile Monorepo)</tspan>
-    </text>
-    
-    <text y="152">
-      <tspan x="24" class="key">drwxr-xr-x</tspan>
-      <tspan x="125" class="val-bold">Emergency-Dispatch/</tspan>
-      <tspan x="270" class="val-dim">React 19 · TypeScript · SignalR · Mapbox GL</tspan>
-    </text>
-    <text y="174">
-      <tspan x="270" class="meta">↳ Real-time fleet dispatch management with live tracking &amp; heatmap</tspan>
-    </text>
+  <!-- Tab 3: projects.md -->
+  <g class="tab-view-3">
+    <rect x="355" y="6" width="135" height="28" rx="5" fill="#0B2530" stroke="#174D63" stroke-width="0.8" />
+    <text x="422" y="24" text-anchor="middle" font-size="11.5" fill="#A8E6CF" font-weight="600">🚀 projects.md</text>
+  </g>
+  <g class="tab-view-1">
+    <text x="422" y="24" text-anchor="middle" font-size="11.5" fill="#336a7e">projects.md</text>
+  </g>
+  <g class="tab-view-2">
+    <text x="422" y="24" text-anchor="middle" font-size="11.5" fill="#336a7e">projects.md</text>
   </g>
 
-  <!-- ═════════ SLIDE 3: TECH STACK ═════════ -->
-  <g class="slide-3">
-    <text y="62">
-      <tspan x="24" class="prompt-user">nghiamh@workstation:~$</tspan>
-      <tspan class="cmd"> cat stack.txt</tspan>
-      <tspan class="cursor" fill="#38BFA7">_</tspan>
-    </text>
-    
-    <text y="90">
-      <tspan x="24" class="key">languages</tspan>
-      <tspan x="125" class="val">JavaScript (ES6+) · TypeScript · HTML5 · CSS3 · SQL</tspan>
-    </text>
-    
-    <text y="114">
-      <tspan x="24" class="key">frameworks</tspan>
-      <tspan x="125" class="val">React Native · Expo · React.js · Node.js · Express.js</tspan>
-    </text>
-    
-    <text y="138">
-      <tspan x="24" class="key">database</tspan>
-      <tspan x="125" class="val">MySQL · MongoDB · RESTful APIs · SignalR</tspan>
-    </text>
-    
-    <text y="162">
-      <tspan x="24" class="key">tools</tspan>
-      <tspan x="125" class="val">Git · GitHub · Postman · VS Code · Vite</tspan>
-    </text>
+  <!-- Header Right Indicator -->
+  <g transform="translate(785, 17)">
+    <use href="#daisy" />
+  </g>
+  <text x="768" y="21" text-anchor="end" font-size="11" fill="#38BFA7" letter-spacing="0.5">nghiamh.dev</text>
 
-    <text y="186">
-      <tspan x="24" class="key">focus</tspan>
-      <tspan x="125" class="val-dim">Cross-Platform Mobile Apps · Fullstack Web Architectures</tspan>
-    </text>
+  <!-- ==================== TAB 1: PROFILE.TS ==================== -->
+  <g class="tab-view-1" transform="translate(18, 54)">
+    <text y="14"><tspan x="0" class="ln">01</tspan> <tspan x="32" class="kw">export const</tspan> <tspan class="var-name">developer</tspan> <tspan class="punct">=</tspan> <tspan class="punct">{</tspan></text>
+    <text y="36"><tspan x="0" class="ln">02</tspan> <tspan x="50" class="prop">name:</tspan> <tspan class="str">"Hồ Minh Nghĩa"</tspan><tspan class="punct">,</tspan> <tspan class="comment">// (Nghiamh)</tspan></text>
+    <text y="58"><tspan x="0" class="ln">03</tspan> <tspan x="50" class="prop">title:</tspan> <tspan class="str-hi">"Mobile &amp; Fullstack Web Engineer"</tspan><tspan class="punct">,</tspan></text>
+    <text y="80"><tspan x="0" class="ln">04</tspan> <tspan x="50" class="prop">passions:</tspan> <tspan class="punct">[</tspan><tspan class="str">"React Native"</tspan><tspan class="punct">, </tspan><tspan class="str">"React.js"</tspan><tspan class="punct">, </tspan><tspan class="str">"Node.js"</tspan><tspan class="punct">, </tspan><tspan class="str">"TypeScript"</tspan><tspan class="punct">],</tspan></text>
+    <text y="102"><tspan x="0" class="ln">05</tspan> <tspan x="50" class="prop">status:</tspan> <tspan class="str">"Open for Fresher &amp; Internship opportunities"</tspan><tspan class="punct">,</tspan></text>
+    <text y="124"><tspan x="0" class="ln">06</tspan> <tspan x="50" class="prop">philosophy:</tspan> <tspan class="str">"Clean code, fluid UX, and resilient architecture."</tspan></text>
+    <text y="146"><tspan x="0" class="ln">07</tspan> <tspan x="32" class="punct">};</tspan> <rect class="cursor" x="55" y="134" width="7" height="15" /></text>
+    <text y="168"><tspan x="0" class="ln">08</tspan> <tspan x="32" class="comment">// 🌼 Yang Willow Wood · Thủy dưỡng Mộc</tspan></text>
   </g>
 
-  <!-- Bottom Status Bar -->
-  <line x1="0" y1="212" x2="800" y2="212" stroke="#174D63" stroke-width="1"/>
+  <!-- ==================== TAB 2: STACK.JSON ==================== -->
+  <g class="tab-view-2" transform="translate(18, 54)">
+    <text y="14"><tspan x="0" class="ln">01</tspan> <tspan x="32" class="punct">{</tspan></text>
+    <text y="36"><tspan x="0" class="ln">02</tspan> <tspan x="50" class="prop">"mobile":</tspan> <tspan class="str">"React Native, Expo, Redux Toolkit, NativeWind"</tspan><tspan class="punct">,</tspan></text>
+    <text y="58"><tspan x="0" class="ln">03</tspan> <tspan x="50" class="prop">"webFrontend":</tspan> <tspan class="str">"React.js 19, TypeScript, TailwindCSS, Vite"</tspan><tspan class="punct">,</tspan></text>
+    <text y="80"><tspan x="0" class="ln">04</tspan> <tspan x="50" class="prop">"backend":</tspan> <tspan class="str">"Node.js, Express.js, RESTful APIs, SignalR"</tspan><tspan class="punct">,</tspan></text>
+    <text y="102"><tspan x="0" class="ln">05</tspan> <tspan x="50" class="prop">"databases":</tspan> <tspan class="str">"MySQL, MongoDB"</tspan><tspan class="punct">,</tspan></text>
+    <text y="124"><tspan x="0" class="ln">06</tspan> <tspan x="50" class="prop">"devTools":</tspan> <tspan class="str">"Git, GitHub, Postman, VS Code"</tspan></text>
+    <text y="146"><tspan x="0" class="ln">07</tspan> <tspan x="32" class="punct">}</tspan> <rect class="cursor" x="48" y="134" width="7" height="15" /></text>
+  </g>
+
+  <!-- ==================== TAB 3: PROJECTS.MD ==================== -->
+  <g class="tab-view-3" transform="translate(18, 54)">
+    <text y="14"><tspan x="0" class="ln">01</tspan> <tspan x="32" class="kw"># Featured Works</tspan></text>
+    <text y="38"><tspan x="0" class="ln">02</tspan> <tspan x="32" class="str-hi">▶ ArenaS-Platform</tspan> <tspan class="comment">── Full-stack Sports Arena Ecosystem</tspan></text>
+    <text y="58"><tspan x="0" class="ln">03</tspan> <tspan x="54" class="var-name">└─ Monorepo: Node.js (BE) + React.js (FE) + React Native (Mobile)</tspan></text>
+    <text y="82"><tspan x="0" class="ln">04</tspan> <tspan x="32" class="str-hi">▶ Emergency-Dispatch</tspan> <tspan class="comment">── Real-time Fleet Coordination System</tspan></text>
+    <text y="102"><tspan x="0" class="ln">05</tspan> <tspan x="54" class="var-name">└─ Live Tracking: React 19 + TypeScript + SignalR + Mapbox GL</tspan></text>
+    <text y="126"><tspan x="0" class="ln">06</tspan> <tspan x="32" class="comment">Ready to deploy and contribute to high-impact products 🌼</tspan></text>
+    <text y="148"><tspan x="0" class="ln">07</tspan> <tspan x="32" class="punct">$ git status: clean</tspan> <rect class="cursor" x="180" y="136" width="7" height="15" /></text>
+  </g>
+
+  <!-- Bottom Modern Statusline -->
+  <line x1="0" y1="240" x2="820" y2="240" stroke="#174D63" stroke-width="1" />
   
-  <!-- Left Status -->
-  <circle cx="24" cy="229" r="3.5" fill="#38BFA7"/>
-  <text x="36" y="232" class="meta">zsh 5.9  <tspan fill="#174D63">|</tspan>  git:(<tspan fill="#A8E6CF">main</tspan>)  <tspan fill="#174D63">|</tspan>  utf-8</text>
+  <!-- Mode badge -->
+  <rect x="0" y="241" width="75" height="28" rx="4" fill="#38BFA7" />
+  <text x="37" y="259" text-anchor="middle" font-size="11" font-weight="700" fill="#0B2530">DEV</text>
 
-  <!-- Right Status with tiny daisy -->
-  <g transform="translate(710, 229)">
-    <use href="#daisyIcon" transform="scale(0.65)" />
-  </g>
-  <text x="780" y="232" text-anchor="end">
-    <tspan class="status-ok">200 OK</tspan>
-    <tspan class="meta">  <tspan fill="#174D63">|</tspan>  cycle: 7s</tspan>
+  <!-- Statusline items -->
+  <text x="88" y="259" font-size="11" fill="#A8E6CF">⎇ main <tspan fill="#174D63">│</tspan> utf-8 <tspan fill="#174D63">│</tspan> <tspan fill="#38BFA7">nghiamh/workspace</tspan></text>
+
+  <!-- Right statusline items -->
+  <text x="806" y="259" text-anchor="end" font-size="11" fill="#4d899e">
+    <tspan fill="#38BFA7">200 OK</tspan> <tspan fill="#174D63">│</tspan> TypeScript <tspan fill="#174D63">│</tspan> 🌼 2003
   </text>
 </svg>
