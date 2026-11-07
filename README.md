@@ -19,10 +19,9 @@
 
 ### 🚀 Featured Projects
 
-| Project | Platform | Tech Stack | Source Code |
+| Project | Architecture | Tech Stack | Repository |
 | :--- | :--- | :--- | :--- |
-| **ArenaS Web** | Web App | React.js, Node.js, Express, MySQL | [🔗 Nghiamh/ArenaS_Web](https://github.com/Nghiamh/ArenaS_Web) |
-| **ArenaS Mobile** | Mobile App | React Native, Expo, Mapbox | [🔗 Nghiamh/ArenaS_Mobile](https://github.com/Nghiamh/ArenaS_Mobile) |
+| **ArenaS** | Monorepo (Backend API + Web Admin/Portal + Mobile App) | React Native, React.js, Node.js, Express, MySQL | [🔗 Nghiamh/ArenaS_Web](https://github.com/Nghiamh/ArenaS_Web) |
 
 ---
 
