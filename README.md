@@ -1,7 +1,7 @@
 <div align="center">
 
   <!-- Bento Grid Dashboard Component (No Avatar Required) -->
-  <img src="./assets/bento_dashboard.svg" width="100%" alt="Hồ Minh Nghĩa - Developer Bento Dashboard" />
+  <img src="./assets/profile_card.svg" width="100%" alt="Hồ Minh Nghĩa - Developer Bento Dashboard" />
 
   <br/><br/>
 
