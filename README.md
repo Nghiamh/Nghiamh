@@ -36,13 +36,10 @@
 
 ### 🚀 Featured Engineering Projects
 
-- **ArenaS Platform** `React Native` `Expo` `React.js` `Node.js` `Express` `MySQL`  
-  Comprehensive sports arena booking & tournament management ecosystem built as a unified Monorepo, featuring a native mobile app for athletes and a real-time web portal for arena operators.  
-  👉 [Repository: Nghiamh/ArenaS-Platform](https://github.com/Nghiamh/ArenaS-Platform)
-
-- **Emergency Response Dispatch System** `React 19` `TypeScript` `SignalR` `Mapbox GL` `TailwindCSS`  
-  Real-time emergency dispatch management platform with live ambulance tracking, heatmap visualization, instant dispatch coordination, and WebSocket communication.  
-  👉 [Repository: emergency-dispatch-frontend](https://github.com/emergency-dispatch/emergency-dispatch-frontend)
+| Project | Description | Tech Stack | Repository |
+| :--- | :--- | :--- | :--- |
+| **ArenaS Platform** | Sports Arena Booking System (Backend, Web & Mobile Monorepo) | React Native, React.js, Node.js, Express, MySQL | [🔗 ArenaS-Platform](https://github.com/Nghiamh/ArenaS-Platform) |
+| **Emergency Dispatch** | Real-time Emergency Response & Fleet Dispatch Management | React 19, TypeScript, SignalR, Mapbox GL, TailwindCSS | [🔗 emergency-dispatch-frontend](https://github.com/emergency-dispatch/emergency-dispatch-frontend) |
 
 ---
 
