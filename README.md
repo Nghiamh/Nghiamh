@@ -19,9 +19,9 @@
 
 ### 🚀 Featured Projects
 
-| Project | Architecture | Tech Stack | Repository |
+| Project | Description | Tech Stack | Repository |
 | :--- | :--- | :--- | :--- |
-| **ArenaS** | Monorepo (Backend API + Web Admin/Portal + Mobile App) | React Native, React.js, Node.js, Express, MySQL | [🔗 Nghiamh/ArenaS_Web](https://github.com/Nghiamh/ArenaS_Web) |
+| **ArenaS** | Sports Arena Booking System (Backend, Web & Mobile) | React Native, React.js, Node.js, Express, MySQL | [ArenaS-Platform](https://github.com/Nghiamh/ArenaS-Platform) |
 
 ---
 
